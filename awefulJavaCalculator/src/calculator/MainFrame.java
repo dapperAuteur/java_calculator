@@ -54,8 +54,18 @@ public class MainFrame extends javax.swing.JFrame {
         display.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
 
         one.setText("1");
+        one.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                oneActionPerformed(evt);
+            }
+        });
 
         two.setText("2");
+        two.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                twoActionPerformed(evt);
+            }
+        });
 
         three.setText("3");
         three.addActionListener(new java.awt.event.ActionListener() {
@@ -79,6 +89,11 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         six.setText("6");
+        six.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sixActionPerformed(evt);
+            }
+        });
 
         seven.setText("7");
         seven.addActionListener(new java.awt.event.ActionListener() {
@@ -88,8 +103,18 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         eight.setText("8");
+        eight.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                eightActionPerformed(evt);
+            }
+        });
 
         nine.setText("9");
+        nine.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nineActionPerformed(evt);
+            }
+        });
 
         plus.setText("+");
         plus.addActionListener(new java.awt.event.ActionListener() {
@@ -119,6 +144,11 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         zero.setText("0");
+        zero.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                zeroActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -219,15 +249,36 @@ public class MainFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void threeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_threeActionPerformed
-        // TODO add your handling code here:
+        if(display.getText() !=null)
+      {
+          display.setText(display.getText().toString()+"3");
+      }
+      else
+      {
+          display.setText("3");
+      }
     }//GEN-LAST:event_threeActionPerformed
 
     private void fourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fourActionPerformed
-        // TODO add your handling code here:
+        if(display.getText() !=null)
+      {
+          display.setText(display.getText().toString()+"4");
+      }
+      else
+      {
+          display.setText("4");
+      }
     }//GEN-LAST:event_fourActionPerformed
 
     private void fiveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fiveActionPerformed
-        // TODO add your handling code here:
+        if(display.getText() !=null)
+      {
+          display.setText(display.getText().toString()+"5");
+      }
+      else
+      {
+          display.setText("5");
+      }
     }//GEN-LAST:event_fiveActionPerformed
 
     private void plusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_plusActionPerformed
@@ -243,8 +294,81 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_divideActionPerformed
 
     private void sevenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sevenActionPerformed
-        // TODO add your handling code here:
+        if(display.getText() !=null)
+      {
+          display.setText(display.getText().toString()+"7");
+      }
+      else
+      {
+          display.setText("7");
+      }
     }//GEN-LAST:event_sevenActionPerformed
+
+    private void oneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oneActionPerformed
+      if(display.getText() !=null)
+      {
+          display.setText(display.getText().toString()+"1");
+      }
+      else
+      {
+          display.setText("1");
+      }
+    }//GEN-LAST:event_oneActionPerformed
+
+    private void twoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_twoActionPerformed
+        if(display.getText() !=null)
+      {
+          display.setText(display.getText().toString()+"2");
+      }
+      else
+      {
+          display.setText("2");
+      }
+    }//GEN-LAST:event_twoActionPerformed
+
+    private void sixActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sixActionPerformed
+        if(display.getText() !=null)
+      {
+          display.setText(display.getText().toString()+"6");
+      }
+      else
+      {
+          display.setText("6");
+      }
+    }//GEN-LAST:event_sixActionPerformed
+
+    private void eightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eightActionPerformed
+        if(display.getText() !=null)
+      {
+          display.setText(display.getText().toString()+"8");
+      }
+      else
+      {
+          display.setText("8");
+      }
+    }//GEN-LAST:event_eightActionPerformed
+
+    private void nineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nineActionPerformed
+        if(display.getText() !=null)
+      {
+          display.setText(display.getText().toString()+"9");
+      }
+      else
+      {
+          display.setText("9");
+      }
+    }//GEN-LAST:event_nineActionPerformed
+
+    private void zeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zeroActionPerformed
+        if(display.getText() !=null)
+      {
+          display.setText(display.getText().toString()+"0");
+      }
+      else
+      {
+          display.setText("0");
+      }
+    }//GEN-LAST:event_zeroActionPerformed
 
     /**
      * @param args the command line arguments
