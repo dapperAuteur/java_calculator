@@ -10,7 +10,9 @@ package calculator;
  * @author amcdonald
  */
 public class MainFrame extends javax.swing.JFrame {
-
+    int first_no,second_no,result;
+    float div_result;
+    String operation;
     /**
      * Creates new form MainFrame
      */
@@ -133,8 +135,18 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         multiply.setText("*");
+        multiply.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                multiplyActionPerformed(evt);
+            }
+        });
 
         equal.setText("=");
+        equal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                equalActionPerformed(evt);
+            }
+        });
 
         divide.setText("/");
         divide.addActionListener(new java.awt.event.ActionListener() {
@@ -282,15 +294,21 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_fiveActionPerformed
 
     private void plusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_plusActionPerformed
-        // TODO add your handling code here:
+        first_no = Integer.parseInt(display.getText());
+        display.setText("");
+        operation = "addition";
     }//GEN-LAST:event_plusActionPerformed
 
     private void subtractActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subtractActionPerformed
-        // TODO add your handling code here:
+        first_no = Integer.parseInt(display.getText());
+        display.setText("");
+        operation = "subtraction";
     }//GEN-LAST:event_subtractActionPerformed
 
     private void divideActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divideActionPerformed
-        // TODO add your handling code here:
+        first_no = Integer.parseInt(display.getText());
+        display.setText("");
+        operation = "divide";
     }//GEN-LAST:event_divideActionPerformed
 
     private void sevenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sevenActionPerformed
@@ -369,6 +387,40 @@ public class MainFrame extends javax.swing.JFrame {
           display.setText("0");
       }
     }//GEN-LAST:event_zeroActionPerformed
+
+    private void equalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_equalActionPerformed
+        second_no = Integer.parseInt(display.getText());
+        if(operation.equals("addition"))
+        {
+            result = first_no + second_no;
+            String temp = Integer.toString(result);
+            display.setText(temp);
+        }
+        if(operation.equals("subtraction"))
+        {
+            result = first_no - second_no;
+            String temp = Integer.toString(result);
+            display.setText(temp);
+        }
+        if(operation.equals("multiply"))
+        {
+            result = first_no * second_no;
+            String temp = Integer.toString(result);
+            display.setText(temp);
+        }
+        if(operation.equals("divide"))
+        {
+            div_result = (float)first_no / second_no;
+            String temp = Float.toString(div_result);
+            display.setText(temp);
+        }
+    }//GEN-LAST:event_equalActionPerformed
+
+    private void multiplyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multiplyActionPerformed
+        first_no = Integer.parseInt(display.getText());
+        display.setText("");
+        operation = "multiply";
+    }//GEN-LAST:event_multiplyActionPerformed
 
     /**
      * @param args the command line arguments
