@@ -126,6 +126,11 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         clear.setText("Clear");
+        clear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clearActionPerformed(evt);
+            }
+        });
 
         subtract.setText("-");
         subtract.addActionListener(new java.awt.event.ActionListener() {
@@ -421,6 +426,15 @@ public class MainFrame extends javax.swing.JFrame {
         display.setText("");
         operation = "multiply";
     }//GEN-LAST:event_multiplyActionPerformed
+
+    private void clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearActionPerformed
+        display.setText("");
+        first_no = 0;
+        second_no = 0;
+        result = 0;
+        div_result = 0;
+        operation = null;
+    }//GEN-LAST:event_clearActionPerformed
 
     /**
      * @param args the command line arguments
